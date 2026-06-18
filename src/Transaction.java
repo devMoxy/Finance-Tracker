@@ -34,6 +34,9 @@ public class Transaction {
         return date;
     }
 
+    public String toSaveFormat(){
+        return amount + "|" + type + "|" + category + "|" + description + "|" + date;
+    }
 
     @Override
     public String toString(){
