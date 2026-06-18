@@ -5,6 +5,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         FileHandler fileHandler = new FileHandler();
         TransactionManager manager = new TransactionManager();
+        double amount;
+        String category;
+        String description;
+        String date;
 
         // load existing data on startup
         manager.loadTransactions(fileHandler.load());
@@ -24,31 +28,36 @@ public class Main {
 
             switch(choice){
                 case "1":
+                    System.out.println("Transaction type is Income!");
                     System.out.print("Enter amount: ");
-                    double amount = Double.parseDouble(scanner.nextLine());
-                    System.out.print("Enter transaction type: ");
-                    String type = scanner.nextLine();
+
+                    amount = Double.parseDouble(scanner.nextLine());
                     System.out.print("Enter category: ");
-                    String category = scanner.nextLine();
+
+                    category = scanner.nextLine();
                     System.out.print("Enter description: ");
-                    String description = scanner.nextLine();
+
+                    description = scanner.nextLine();
                     System.out.print("Enter date(like DD-MM-YYYY): ");
-                    String date  = scanner.nextLine();
-                    Transaction incomeTransaction = new Transaction(amount, type,category,description,date);
+
+                    date  = scanner.nextLine();
+                    Transaction incomeTransaction = new Transaction(amount, "INCOME",category,description,date);
                     manager.addTransaction(incomeTransaction);
                     break;
                 case "2":
+                    System.out.println("Transaction type is Income!");
                     System.out.print("Enter amount: ");
                     amount = Double.parseDouble(scanner.nextLine());
-                    System.out.print("Enter transaction type: ");
-                    type = scanner.nextLine();
+
                     System.out.print("Enter category: ");
                     category = scanner.nextLine();
+
                     System.out.print("Enter description: ");
                     description = scanner.nextLine();
+
                     System.out.print("Enter date(like DD-MM-YYYY): ");
                     date  = scanner.nextLine();
-                    Transaction expenseTransaction = new Transaction(amount, type,category,description,date);
+                    Transaction expenseTransaction = new Transaction(amount, "EXPENSE",category,description,date);
                     manager.addTransaction(expenseTransaction);
                     break;
                 case "3":
