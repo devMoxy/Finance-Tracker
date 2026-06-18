@@ -42,4 +42,8 @@ public class TransactionManager {
     public void loadTransactions(ArrayList<Transaction> loaded){
         transactions = loaded;
     }
+
+    public void clearTransactions(){
+        transactions.clear();
+    }
 }

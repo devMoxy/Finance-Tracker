@@ -1,4 +1,0 @@
-1500.0|INCOME|Salary|Work|2024-06-16
-50.0|EXPENSE|Food|Groceries|2024-06-16
-50.0|EXPENSE|Foode|Groceriesee|2024-06-16
-50.0|EXPENSE|Food|Groceriesgegeg|2024-06-16

@@ -21,7 +21,8 @@ public class Main {
             System.out.println("4. View balance");
             System.out.println("5. Filter by category");
             System.out.println("6. Delete transaction");
-            System.out.println("7. Exit");
+            System.out.println("7. Clear all transactions");
+            System.out.println("8. Exit");
             System.out.print("Choose: ");
 
             String choice = scanner.nextLine();
@@ -77,6 +78,11 @@ public class Main {
                     manager.deleteTransaction(index);
                     break;
                 case "7":
+                    manager.clearTransactions();
+                    fileHandler.save(manager.getTransactions());
+                    System.out.println("All transactions cleared.");
+                    break;
+                case "8":
                     fileHandler.save(manager.getTransactions());
                     System.out.println("Saved. Goodbye!");
                     return;
